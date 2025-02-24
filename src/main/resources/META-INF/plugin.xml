@@ -1,8 +1,11 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.origamidevpete.comboopen</id>
-    <name>combo-open</name>
-    <vendor>origamidev-pete</vendor>
+    <name>Combo Open</name>
+    <vendor>Origami Dev</vendor>
+    <description>
+        Adds the Combo Open action to open related files in multiple splits.
+    </description>
 
     <depends>com.intellij.modules.platform</depends>
 
@@ -15,4 +18,10 @@
     <applicationListeners>
         <listener class="com.github.origamidevpete.comboopen.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
+
+    <actions>
+        <action id="com.github.origamidevpete.comboopen.actions.ComboOpenAction"
+                class="com.github.origamidevpete.comboopen.actions.ComboOpenAction" text="Combo Open"
+                description="Opens multiple related files at once"/>
+    </actions>
 </idea-plugin>
